@@ -1,11 +1,11 @@
-package com.shuvankar.gyaan100.knowledgeservice;
+package com.shuvankar.gyaan100.serverservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KnowledgeServiceApplication {
+public class ServerServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(KnowledgeServiceApplication.class, args);
+        SpringApplication.run(ServerServiceApplication.class, args);
     }
 }
