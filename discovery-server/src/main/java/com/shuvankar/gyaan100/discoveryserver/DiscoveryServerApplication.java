@@ -11,4 +11,7 @@ public class DiscoveryServerApplication {
         SpringApplication.run(DiscoveryServerApplication.class, args);
 
     }
+    //TODO: Enable basic security to access Discovery service via API Gateway.
+    // Currently it can be accessed using direct link. e.g. http://localhost:8761/
+    // It should be accessed using http://localhost:8080/eureka/web
 }

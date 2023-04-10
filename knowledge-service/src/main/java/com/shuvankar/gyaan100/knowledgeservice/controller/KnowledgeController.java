@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/knowledge")
+//@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class KnowledgeController {
     private final KnowledgeService knowledgeService;
@@ -17,5 +18,11 @@ public class KnowledgeController {
     public String addKnowledge(@RequestBody KnowledgeRequest knowledgeRequest) {
         knowledgeService.addKnowledge(knowledgeRequest);
         return "Knowledge Added Successfully";
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public String getKnowledge() {
+        return "Getting Knowledges...";
     }
 }

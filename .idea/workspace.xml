@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Added API Gateway">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/shuvankar/gyaan100/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Implemented oauth security with keycloak">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/shuvankar/gyaan100/apigateway/controller/KnowledgeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/shuvankar/gyaan100/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/shuvankar/gyaan100/apigateway/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/com/shuvankar/gyaan100/discoveryserver/DiscoveryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/shuvankar/gyaan100/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +56,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Codebase/Java/gyaan100/server-service/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Codebase/Java/gyaan&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -61,6 +65,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.postfix.templates&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;4eee12589e1bc0214a07a294263048e0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -70,8 +75,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Codebase\Java\gyaan100\api-gateway\src\main\java\com\shuvankar\gyaan100\apigateway" />
       <recent name="C:\Codebase\Java\gyaan100\server-service\src\main\resources" />
       <recent name="C:\Codebase\Java\gyaan100\server-service\src\main\java\com\shuvankar\gyaan100\serverservice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shuvankar.gyaan100.apigateway" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,6 +91,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shuvankar.gyaan100.apigateway.ApiGatewayApplication" />
@@ -129,6 +141,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.KnowledgeServiceApplication" />
@@ -137,8 +150,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.KnowledgeServiceApplication" />
-        <item itemvalue="Spring Boot.ServerServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="Spring Boot.ServerServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +167,11 @@
       <workItem from="1678527506738" duration="18324000" />
       <workItem from="1679132145417" duration="630000" />
       <workItem from="1679459370388" duration="808000" />
-      <workItem from="1679759617252" duration="7632000" />
+      <workItem from="1679759617252" duration="21463000" />
+      <workItem from="1680749225739" duration="12585000" />
+      <workItem from="1680840901381" duration="22112000" />
+      <workItem from="1681039395689" duration="4105000" />
+      <workItem from="1681053039054" duration="11694000" />
     </task>
     <task id="LOCAL-00001" summary="Added server service and discovery server.">
       <created>1678540071695</created>
@@ -169,15 +187,34 @@
       <option name="project" value="LOCAL" />
       <updated>1678611518476</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented oauth security with keycloak">
+      <created>1680062487287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680062487287</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added server service and discovery server." />
     <MESSAGE value="Added API Gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added API Gateway" />
+    <MESSAGE value="Implemented oauth security with keycloak" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented oauth security with keycloak" />
   </component>
 </project>
