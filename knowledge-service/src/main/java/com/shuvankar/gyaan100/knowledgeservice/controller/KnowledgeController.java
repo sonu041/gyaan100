@@ -1,10 +1,14 @@
 package com.shuvankar.gyaan100.knowledgeservice.controller;
 
 import com.shuvankar.gyaan100.knowledgeservice.dto.KnowledgeRequest;
+import com.shuvankar.gyaan100.knowledgeservice.dto.KnowledgeResponse;
+import com.shuvankar.gyaan100.knowledgeservice.exception.ResourceNotFoundException;
 import com.shuvankar.gyaan100.knowledgeservice.service.KnowledgeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/knowledge")
@@ -22,7 +26,13 @@ public class KnowledgeController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public String getKnowledge() {
-        return "Getting Knowledges...";
+    public List<KnowledgeResponse> getKnowledge() {
+        return knowledgeService.getAllKnowledges();
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void updateKnowledge(@PathVariable Long id, @RequestBody KnowledgeRequest knowledgeRequest) throws ResourceNotFoundException {
+        knowledgeService.updateKnowledge(id, knowledgeRequest);
     }
 }
