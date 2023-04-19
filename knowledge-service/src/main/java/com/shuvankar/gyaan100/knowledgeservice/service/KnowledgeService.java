@@ -7,6 +7,7 @@ import com.shuvankar.gyaan100.knowledgeservice.model.Knowledge;
 import com.shuvankar.gyaan100.knowledgeservice.repository.KnowledgeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,16 +21,17 @@ import static com.shuvankar.gyaan100.knowledgeservice.config.AppConstants.ID;
 public class KnowledgeService {
     private final KnowledgeRepository knowledgeRepository;
 
-    public void addKnowledge(KnowledgeRequest knowledgeRequest) {
+    public KnowledgeResponse addKnowledge(KnowledgeRequest knowledgeRequest) {
         Knowledge knowledge = new Knowledge();
         knowledge.setTitle(knowledgeRequest.getTitle());
         knowledge.setDescription(knowledgeRequest.getDescription());
-//		Knowledge knowledge = Knowledge.builder
-
+        knowledge.setActive("Y");
         knowledgeRepository.save(knowledge);
+        return mapToKnowledgeResponse(knowledge);
     }
 
     public List<KnowledgeResponse> getAllKnowledges() {
+//        List<Knowledge> knowledges = knowledgeRepository.findActiveAll("Y");
         List<Knowledge> knowledges = knowledgeRepository.findAll();
         return knowledges.stream().map(this::mapToKnowledgeResponse).toList();
     }
@@ -37,11 +39,15 @@ public class KnowledgeService {
     public void updateKnowledge(Long id, KnowledgeRequest knowledgeRequest) throws ResourceNotFoundException {
         findById(id).map(p -> {
             BeanUtils.copyProperties(knowledgeRequest, p);
-
             return knowledgeRepository.save(p);
         }).orElseThrow(() -> new ResourceNotFoundException("Product", ID, id));
+    }
 
-
+    public void deleteKnowledge(Long id) throws ResourceNotFoundException {
+        findById(id).map(p -> {
+            p.setActive("N");   //Soft delete
+            return knowledgeRepository.save(p);
+        }).orElseThrow(() -> new ResourceNotFoundException("Knowledge", ID, id));
     }
 
     public Optional<Knowledge> findById(Long id) {
@@ -50,6 +56,7 @@ public class KnowledgeService {
 
     private KnowledgeResponse mapToKnowledgeResponse(Knowledge knowledge) {
         return KnowledgeResponse.builder()
+                .id(knowledge.getId())
                 .title(knowledge.getTitle())
                 .description(knowledge.getDescription())
                 .build();

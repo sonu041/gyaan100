@@ -4,8 +4,10 @@ import com.shuvankar.gyaan100.knowledgeservice.dto.KnowledgeRequest;
 import com.shuvankar.gyaan100.knowledgeservice.dto.KnowledgeResponse;
 import com.shuvankar.gyaan100.knowledgeservice.exception.ResourceNotFoundException;
 import com.shuvankar.gyaan100.knowledgeservice.service.KnowledgeService;
+import com.shuvankar.gyaan100.knowledgeservice.util.HttpUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,9 +21,11 @@ public class KnowledgeController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String addKnowledge(@RequestBody KnowledgeRequest knowledgeRequest) {
-        knowledgeService.addKnowledge(knowledgeRequest);
-        return "Knowledge Added Successfully";
+    public ResponseEntity<KnowledgeResponse> addKnowledge(@RequestBody KnowledgeRequest knowledgeRequest) {
+        KnowledgeResponse response = new KnowledgeResponse();
+        response = knowledgeService.addKnowledge(knowledgeRequest);
+        return new ResponseEntity<KnowledgeResponse>(response, HttpUtil.getDefaultResponseHeader(), HttpStatus.CREATED);
+//        return "[{ 'Message': 'Knowledge Added Successfully' }]";
     }
 
     @GetMapping
@@ -34,5 +38,12 @@ public class KnowledgeController {
     @ResponseStatus(HttpStatus.OK)
     public void updateKnowledge(@PathVariable Long id, @RequestBody KnowledgeRequest knowledgeRequest) throws ResourceNotFoundException {
         knowledgeService.updateKnowledge(id, knowledgeRequest);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteKnowledge(@PathVariable Long id) throws ResourceNotFoundException {
+
+        knowledgeService.deleteKnowledge(id);
     }
 }
