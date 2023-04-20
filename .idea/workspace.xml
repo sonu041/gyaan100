@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Update Knowledge implemented.">
+    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="return JSON Response in addKnowledge">
       <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/shuvankar/gyaan100/apigateway/controller/KnowledgeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/util/HttpUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/dto/KnowledgeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/dto/KnowledgeResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/model/Knowledge.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/model/Knowledge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/repository/KnowledgeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/repository/KnowledgeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/service/KnowledgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/service/KnowledgeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +170,7 @@
       <workItem from="1681053039054" duration="14179000" />
       <workItem from="1681547694834" duration="3813000" />
       <workItem from="1681646464483" duration="7588000" />
-      <workItem from="1681678100677" duration="7718000" />
+      <workItem from="1681678100677" duration="14914000" />
     </task>
     <task id="LOCAL-00001" summary="Added server service and discovery server.">
       <created>1678540071695</created>
@@ -211,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681676111865</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="return JSON Response in addKnowledge">
+      <created>1681907608697</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681907608697</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +237,7 @@
     <MESSAGE value="Implemented oauth security with keycloak" />
     <MESSAGE value="Fixed Options Preflight CORS issue" />
     <MESSAGE value="Update Knowledge implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Knowledge implemented." />
+    <MESSAGE value="return JSON Response in addKnowledge" />
+    <option name="LAST_COMMIT_MESSAGE" value="return JSON Response in addKnowledge" />
   </component>
 </project>
