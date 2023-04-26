@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="return JSON Response in addKnowledge">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/shuvankar/gyaan100/apigateway/controller/KnowledgeController.java" afterDir="false" />
+    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Fix hard delete knowledge logic">
+      <change afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/config/AppConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/dto/ServerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/util/HttpUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/service/KnowledgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/service/KnowledgeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/service/ServerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,45 +39,49 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2MrZ8t6PfpelShGl9yCMaPijR2P" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Codebase/Java/angular-spring-cloud-demo-main/spring-social-login-cloud-demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.postfix.templates&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4eee12589e1bc0214a07a294263048e0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Codebase/Java/gyaan100/server-service/src/main/java/com/shuvankar/gyaan100/serverservice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.postfix.templates",
+    "spring.configuration.checksum": "4eee12589e1bc0214a07a294263048e0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Codebase\Java\gyaan100\server-service\src\main\java\com\shuvankar\gyaan100\serverservice" />
+      <recent name="C:\Codebase\Java\gyaan100\server-service\src\main\java\com\shuvankar\gyaan100" />
       <recent name="C:\Codebase\Java\gyaan100\api-gateway\src\main\java\com\shuvankar\gyaan100\apigateway" />
       <recent name="C:\Codebase\Java\gyaan100\server-service\src\main\resources" />
-      <recent name="C:\Codebase\Java\gyaan100\server-service\src\main\java\com\shuvankar\gyaan100\serverservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.shuvankar.gyaan100.apigateway" />
@@ -145,10 +153,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServerServiceApplication" />
         <item itemvalue="Spring Boot.KnowledgeServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
-        <item itemvalue="Spring Boot.ServerServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +178,7 @@
       <workItem from="1681053039054" duration="14179000" />
       <workItem from="1681547694834" duration="3813000" />
       <workItem from="1681646464483" duration="7588000" />
-      <workItem from="1681678100677" duration="14914000" />
+      <workItem from="1681678100677" duration="26247000" />
     </task>
     <task id="LOCAL-00001" summary="Added server service and discovery server.">
       <created>1678540071695</created>
@@ -214,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681907608697</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix hard delete knowledge logic">
+      <created>1681964865048</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681964865048</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +253,7 @@
     <MESSAGE value="Fixed Options Preflight CORS issue" />
     <MESSAGE value="Update Knowledge implemented." />
     <MESSAGE value="return JSON Response in addKnowledge" />
-    <option name="LAST_COMMIT_MESSAGE" value="return JSON Response in addKnowledge" />
+    <MESSAGE value="Fix hard delete knowledge logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix hard delete knowledge logic" />
   </component>
 </project>

@@ -41,7 +41,7 @@ public class KnowledgeService {
         findById(id).map(p -> {
             BeanUtils.copyProperties(knowledgeRequest, p);
             return knowledgeRepository.save(p);
-        }).orElseThrow(() -> new ResourceNotFoundException("Product", ID, id));
+        }).orElseThrow(() -> new ResourceNotFoundException("Knowledge", ID, id));
     }
 
     /** Soft Delete Knowledge. This is not yet used. We can use it later if required. */
