@@ -36,7 +36,7 @@ public class KnowledgeController {
     @ResponseStatus(HttpStatus.OK)
     public Knowledge getKnowledge(@PathVariable Long id ) throws ResourceNotFoundException {
 //        return knowledgeService.getKnowledge();
-        return knowledgeService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product", ID, id));
+        return knowledgeService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Knowledge", ID, id));
     }
 
     /** Get all knowledge */

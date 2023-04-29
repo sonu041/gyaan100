@@ -17,6 +17,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>knowledge-service</module>
+        <module>contact-service</module>
+        <module>rca-service</module>
+        <module>template-service</module>
         <module>server-service</module>
         <module>discovery-server</module>
         <module>api-gateway</module>
