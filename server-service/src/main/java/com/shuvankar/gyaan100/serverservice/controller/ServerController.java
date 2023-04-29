@@ -1,6 +1,6 @@
 package com.shuvankar.gyaan100.serverservice.controller;
 
-import com.shuvankar.gyaan100.exception.ResourceNotFoundException;
+import com.shuvankar.gyaan100.serverservice.exception.ResourceNotFoundException;
 import com.shuvankar.gyaan100.serverservice.dto.ServerRequest;
 import com.shuvankar.gyaan100.serverservice.dto.ServerResponse;
 import com.shuvankar.gyaan100.serverservice.model.Server;
@@ -42,6 +42,13 @@ public class ServerController {
     @ResponseStatus(HttpStatus.OK)
     public List<ServerResponse> getAllServers() {
         return serverService.getAllServers();
+    }
+
+    /** Get count of server */
+    @GetMapping("/count")
+    @ResponseStatus(HttpStatus.OK)
+    public int getKnowledgeCount() throws ResourceNotFoundException {
+        return serverService.getAllServers().size();
     }
 
     /** Update Servers */

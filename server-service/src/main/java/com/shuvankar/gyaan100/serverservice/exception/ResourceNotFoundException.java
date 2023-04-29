@@ -1,4 +1,4 @@
-package com.shuvankar.gyaan100.exception;
+package com.shuvankar.gyaan100.serverservice.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

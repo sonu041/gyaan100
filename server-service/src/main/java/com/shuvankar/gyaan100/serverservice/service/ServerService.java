@@ -1,6 +1,6 @@
 package com.shuvankar.gyaan100.serverservice.service;
 
-import com.shuvankar.gyaan100.exception.ResourceNotFoundException;
+import com.shuvankar.gyaan100.serverservice.exception.ResourceNotFoundException;
 import com.shuvankar.gyaan100.serverservice.dto.ServerRequest;
 import com.shuvankar.gyaan100.serverservice.dto.ServerResponse;
 import com.shuvankar.gyaan100.serverservice.model.Server;

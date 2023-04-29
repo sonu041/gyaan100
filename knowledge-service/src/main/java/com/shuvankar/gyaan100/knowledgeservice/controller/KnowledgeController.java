@@ -46,6 +46,14 @@ public class KnowledgeController {
         return knowledgeService.getAllKnowledges();
     }
 
+    /** Get count of knowledge */
+    @GetMapping("/count")
+    @ResponseStatus(HttpStatus.OK)
+    public int getKnowledgeCount() throws ResourceNotFoundException {
+        return knowledgeService.getAllKnowledges().size();
+    }
+//
+
     /** Update Knowledge */
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)

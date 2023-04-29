@@ -4,69 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Added Server service CRUD operations.">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/ContactServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/config/AppConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/controller/ContactController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/dto/ContactRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/dto/ContactResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/model/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/repository/ContactRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/service/ContactService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/util/HttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact-service/src/test/java/com/shuvankar/gyaan100/contactservice/ContactServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/RcaServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/config/AppConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/controller/RcaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/dto/RcaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/dto/RcaResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/model/Rca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/repository/RcaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/service/RcaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/util/HttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rca-service/src/test/java/com/shuvankar/gyaan100/rcaservice/RcaServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/TemplateServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/config/AppConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/controller/TemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/dto/TemplateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/dto/TemplateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/model/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/repository/TemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/service/TemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/java/com/shuvankar/gyaan100/templateservice/util/HttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-service/src/test/java/com/shuvankar/gyaan100/templateservice/TemplateServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Added template, contact and rca services">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/controller/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/controller/RcaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/controller/RcaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/service/ServerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +233,7 @@
       <workItem from="1681547694834" duration="3813000" />
       <workItem from="1681646464483" duration="7588000" />
       <workItem from="1681678100677" duration="27809000" />
-      <workItem from="1682487892167" duration="13957000" />
+      <workItem from="1682487892167" duration="18327000" />
     </task>
     <task id="LOCAL-00001" summary="Added server service and discovery server.">
       <created>1678540071695</created>
@@ -346,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682486297652</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added template, contact and rca services">
+      <created>1682745804375</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682745804375</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +327,7 @@
     <MESSAGE value="return JSON Response in addKnowledge" />
     <MESSAGE value="Fix hard delete knowledge logic" />
     <MESSAGE value="Added Server service CRUD operations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Server service CRUD operations." />
+    <MESSAGE value="Added template, contact and rca services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added template, contact and rca services" />
   </component>
 </project>
