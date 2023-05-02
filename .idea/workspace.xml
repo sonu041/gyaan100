@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Added template, contact and rca services">
+    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Count of services implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/contact-service/src/main/java/com/shuvankar/gyaan100/contactservice/controller/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/controller/KnowledgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/controller/RcaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/controller/RcaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/controller/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-service/src/main/java/com/shuvankar/gyaan100/serverservice/service/ServerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/dto/KnowledgeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/dto/KnowledgeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/dto/KnowledgeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/dto/KnowledgeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/model/Knowledge.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/model/Knowledge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/repository/KnowledgeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/repository/KnowledgeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/service/KnowledgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/knowledge-service/src/main/java/com/shuvankar/gyaan100/knowledgeservice/service/KnowledgeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +233,7 @@
       <workItem from="1681547694834" duration="3813000" />
       <workItem from="1681646464483" duration="7588000" />
       <workItem from="1681678100677" duration="27809000" />
-      <workItem from="1682487892167" duration="18327000" />
+      <workItem from="1682487892167" duration="30046000" />
     </task>
     <task id="LOCAL-00001" summary="Added server service and discovery server.">
       <created>1678540071695</created>
@@ -298,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682745804375</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Count of services implemented">
+      <created>1682762484711</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682762484711</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +335,7 @@
     <MESSAGE value="Fix hard delete knowledge logic" />
     <MESSAGE value="Added Server service CRUD operations." />
     <MESSAGE value="Added template, contact and rca services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added template, contact and rca services" />
+    <MESSAGE value="Count of services implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Count of services implemented" />
   </component>
 </project>

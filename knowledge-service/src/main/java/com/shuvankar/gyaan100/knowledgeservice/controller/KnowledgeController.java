@@ -52,7 +52,13 @@ public class KnowledgeController {
     public int getKnowledgeCount() throws ResourceNotFoundException {
         return knowledgeService.getAllKnowledges().size();
     }
-//
+
+    /** Search knowledge */
+    @GetMapping("/search/{searchText}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<KnowledgeResponse> searchKnowledge(@PathVariable String searchText) throws ResourceNotFoundException {
+        return knowledgeService.searchKnowledge(searchText);
+    }
 
     /** Update Knowledge */
     @PutMapping("/{id}")

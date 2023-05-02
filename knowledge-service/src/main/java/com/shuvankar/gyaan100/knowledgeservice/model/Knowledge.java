@@ -19,4 +19,6 @@ public class Knowledge {
     private String title;
     private String description;
     private String active;
+    private String author;
+    private String created_date;
 }

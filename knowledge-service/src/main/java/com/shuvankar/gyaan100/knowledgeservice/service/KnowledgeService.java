@@ -7,8 +7,11 @@ import com.shuvankar.gyaan100.knowledgeservice.model.Knowledge;
 import com.shuvankar.gyaan100.knowledgeservice.repository.KnowledgeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,6 +28,7 @@ public class KnowledgeService {
         Knowledge knowledge = new Knowledge();
         knowledge.setTitle(knowledgeRequest.getTitle());
         knowledge.setDescription(knowledgeRequest.getDescription());
+        knowledge.setCreated_date(String.valueOf(LocalDate.now()));
         knowledge.setActive("Y");
         knowledgeRepository.save(knowledge);
         return mapToKnowledgeResponse(knowledge);
@@ -32,7 +36,13 @@ public class KnowledgeService {
 
     /** Get All Knowledge Service */
     public List<KnowledgeResponse> getAllKnowledges() {
-        List<Knowledge> knowledges = knowledgeRepository.findAll();
+        List<Knowledge> knowledges = knowledgeRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
+        return knowledges.stream().map(this::mapToKnowledgeResponse).toList();
+    }
+
+    /** Search Knowledge Service */
+    public List<KnowledgeResponse> searchKnowledge(String searchText) {
+        List<Knowledge> knowledges = knowledgeRepository.findByTitleContainingIgnoreCase(searchText);
         return knowledges.stream().map(this::mapToKnowledgeResponse).toList();
     }
 
@@ -68,6 +78,8 @@ public class KnowledgeService {
                 .id(knowledge.getId())
                 .title(knowledge.getTitle())
                 .description(knowledge.getDescription())
+                .author(knowledge.getAuthor())
+                .created_date(knowledge.getCreated_date())
                 .build();
     }
 }

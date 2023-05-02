@@ -13,5 +13,7 @@ public class KnowledgeResponse {
     private Long id;
     private String title;
     private String description;
+    private String author;
+    private String created_date;
 
 }
