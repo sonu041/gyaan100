@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Search Knowledge implemented">
+    <list default="true" id="3fae2b69-6fde-4e7e-9abf-0c831a74dedf" name="Changes" comment="Added root_cause, timeline and action_item in RCA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/dto/RcaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/dto/RcaRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/dto/RcaResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/dto/RcaResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/model/Rca.java" beforeDir="false" afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/model/Rca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/service/RcaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice/service/RcaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,31 +65,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Codebase/Java/gyaan100/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.postfix.templates",
-    "spring.configuration.checksum": "3c3f9e39c9e0c7d46f04eabfef2d7db3",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Codebase/Java/gyaan100/rca-service/src/main/java/com/shuvankar/gyaan100/rcaservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.postfix.templates&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3988fbf5a4ebfcc2041a73336cc885f1&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -115,7 +112,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TemplateServiceApplication">
+  <component name="RunManager" selected="Spring Boot.RcaServiceApplication">
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -126,9 +123,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="contact-service.main" />
+    <configuration name="ContactServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="contact-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shuvankar.gyaan100.contactservice.ContactServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shuvankar.gyaan100.contactservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,18 +198,20 @@
     </configuration>
     <list>
       <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="Spring Boot.ContactServiceApplication" />
       <item itemvalue="Spring Boot.TemplateServiceApplication" />
       <item itemvalue="Spring Boot.RcaServiceApplication" />
-      <item itemvalue="Spring Boot.ContactServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ContactServiceApplication (1)" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.KnowledgeServiceApplication" />
       <item itemvalue="Spring Boot.ServerServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.KnowledgeServiceApplication" />
+        <item itemvalue="Spring Boot.ContactServiceApplication (1)" />
         <item itemvalue="Spring Boot.ServerServiceApplication" />
+        <item itemvalue="Spring Boot.KnowledgeServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
@@ -231,7 +236,9 @@
       <workItem from="1681547694834" duration="3813000" />
       <workItem from="1681646464483" duration="7588000" />
       <workItem from="1681678100677" duration="27809000" />
-      <workItem from="1682487892167" duration="31667000" />
+      <workItem from="1682487892167" duration="35116000" />
+      <workItem from="1684058942136" duration="7574000" />
+      <workItem from="1688618964805" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="Added server service and discovery server.">
       <created>1678540071695</created>
@@ -310,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683002154073</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added root_cause, timeline and action_item in RCA">
+      <created>1683356596557</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683356596557</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +356,7 @@
     <MESSAGE value="Added template, contact and rca services" />
     <MESSAGE value="Count of services implemented" />
     <MESSAGE value="Search Knowledge implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search Knowledge implemented" />
+    <MESSAGE value="Added root_cause, timeline and action_item in RCA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added root_cause, timeline and action_item in RCA" />
   </component>
 </project>
